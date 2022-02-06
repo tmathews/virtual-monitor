@@ -15,3 +15,7 @@ ESC - Exist full screen.
 
 Open to improvements, but I mainly use this to play my Switch on my computer and have done everything I need. This being
 said I probably won't be add any new features unless I find something to improve for myself.
+
+## Screenshot
+
+![Screenshot](./screenshot.png?raw=true])
