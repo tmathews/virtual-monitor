@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="VirtualMonitor.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VirtualMonitor"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <RelativePanel Background="Black" PointerMoved="RelativePanel_PointerMoved">
+        <TextBlock x:Name="elStatusText" Text="Please connect to see visuals." Foreground="White" TextAlignment="Center" VerticalAlignment="Center" HorizontalTextAlignment="Center" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True"/>
+        <CaptureElement x:Name="previewElement" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Visible"/>
+        <StackPanel Orientation="Horizontal" x:Name="optionsElement" Background="#ffffffff" PointerEntered="StackPanel_PointerEntered" PointerExited="StackPanel_PointerExited" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+            <Button x:Name="toggleConnect" Content="Connect" Click="toggleConnect_Click" Margin="10 10 0 10" Width="Auto" ToolTipService.ToolTip="Press Enter to toggle."/>
+            <Button x:Name="toggleFullScreen" Content="Enter Full Screen" Click="toggleFullScreen_Click" Margin="10 10 0 10" ToolTipService.ToolTip="Press F11 to toggle or ESC to exit."/>
+            <Button x:Name="setSize1080p" Content="1080p" Click="setSize1080p_Click" Margin="10 10 0 10" ToolTipService.ToolTip="Press 1."/>
+            <Button x:Name="setSize720p" Content="720p" Click="setSize720p_Click" Margin="10 10 0 10" ToolTipService.ToolTip="Press 2."/>
+            <ComboBox x:Name="elSelectVideo" Margin="10 10 0 10" PlaceholderText="Select Video" />
+            <ComboBox x:Name="elSelectAudio" Margin="10 10 0 10" PlaceholderText="Select Audio" />
+            <TextBox x:Name="elTitle" PlaceholderText="Custom Window Title" Width="200" Height="Auto" Margin="10 10 10 10"/>
+        </StackPanel>
+    </RelativePanel>
+</Page>
