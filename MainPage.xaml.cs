@@ -214,7 +214,13 @@ namespace VirtualMonitor
             if (mediaCapture == null) return;
             if (isCaptureInitialized)
             {
-                await mediaCapture.StopPreviewAsync();
+                try
+                {
+                    await mediaCapture.StopPreviewAsync();
+                } catch (Exception)
+                {
+                    // Do nothing...
+                }
                 isCaptureInitialized = false;
             }
             mediaCapture.Dispose();
